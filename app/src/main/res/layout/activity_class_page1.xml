@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassPage1">
+
+    <TextView
+        android:id="@+id/classInfoText"
+        android:layout_width="349dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="58dp"
+        android:text="CS407: T/TH/F 1-2:15pm"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/hereButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backToListButton" />
+
+    <Button
+        android:id="@+id/backToListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="27dp"
+        android:backgroundTint="#00BCD4"
+        android:onClick="goToClassList"
+        android:text="Back to Class List"
+        app:layout_constraintBottom_toTopOf="@+id/classInfoText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hereButton"
+        android:layout_width="252dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="46dp"
+        android:backgroundTint="#4CAF50"
+        android:text="HERE!"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/absentButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classInfoText"
+        android:onClick="showDialog"/>
+
+    <Button
+        android:id="@+id/absentButton"
+        android:layout_width="252dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="151dp"
+        android:backgroundTint="#E91E1E"
+        android:text="Absent"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hereButton"
+        android:onClick="showDialog"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
