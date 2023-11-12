@@ -9,16 +9,17 @@
     <TextView
         android:id="@+id/classInfoText"
         android:layout_width="349dp"
-        android:layout_height="97dp"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="112dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="426dp"
         android:text="CS407: T/TH/F 1-2:15pm"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/hereButton"
+        app:layout_constraintBottom_toTopOf="@+id/coordinateText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backToListButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/backToListButton"
@@ -45,8 +46,7 @@
         app:layout_constraintBottom_toTopOf="@+id/absentButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classInfoText"
-        android:onClick="showDialog"/>
+        app:layout_constraintTop_toBottomOf="@+id/classInfoText" />
 
     <Button
         android:id="@+id/absentButton"
@@ -59,7 +59,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hereButton"
-        android:onClick="showDialog"/>
+        app:layout_constraintTop_toBottomOf="@+id/hereButton" />
+
+    <TextView
+        android:id="@+id/coordinateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classInfoText" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
