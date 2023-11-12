@@ -6,13 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/studentButton"
+        android:layout_width="196dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginBottom="63dp"
+        android:text="Student Login"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructorButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="goToClassList"/>
+
+    <Button
+        android:id="@+id/instructorButton"
+        android:layout_width="196dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="233dp"
+        android:text="Instructor Login"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/studentButton"
+        android:onClick="goToClassList"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
