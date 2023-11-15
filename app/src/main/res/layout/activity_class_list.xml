@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassList">
+
+    <Button
+        android:id="@+id/classButton"
+        android:layout_width="306dp"
+        android:layout_height="159dp"
+        android:layout_marginBottom="36dp"
+        android:text="CS 407: TThF 1-2:15pm"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/classButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourClassesText"
+        android:onClick="goToClassPage"/>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="294dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="34dp"
+        android:text="Welcome, Jane Doe"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/yourClassesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yourClassesText"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="56dp"
+        android:text="Your Classes:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/classButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+    <Button
+        android:id="@+id/classButton2"
+        android:layout_width="303dp"
+        android:layout_height="164dp"
+        android:layout_marginBottom="152dp"
+        android:backgroundTint="#3794D3"
+        android:text="ART 100: MWF 8-8:50am"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classButton"
+        android:onClick="goToClassPage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
