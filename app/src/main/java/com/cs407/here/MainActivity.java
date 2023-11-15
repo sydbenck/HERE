@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -53,16 +54,22 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 task.getResult(ApiException.class);
-                navigateToSecondActivity();
+                goToClassList();
             } catch (ApiException e) {
-                Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Something went wrong " + e, Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    void navigateToSecondActivity(){
+    public void goToClassList(){
         finish();
-        Intent intent = new Intent(MainActivity.this, LoggedIn.class);
+        Intent intent = new Intent(this, ClassList.class);
         startActivity(intent);
     }
+
+    public void goToStudentList(View view) {
+        Intent intent = new Intent(this, StudentList.class);
+        startActivity(intent);
+    }
+
 }
