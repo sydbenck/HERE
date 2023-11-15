@@ -38,8 +38,6 @@ public class ClassPage1 extends AppCompatActivity {
 
     private LocationRequest locationRequest;
     private Button hereButton;
-//    private TextView addressText = findViewById(R.id.coordinateText);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
