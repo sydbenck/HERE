@@ -17,6 +17,9 @@
         android:theme="@style/Theme.HERE"
         tools:targetApi="31">
         <activity
+            android:name=".StudentList"
+            android:exported="false" />
+        <activity
             android:name=".ClassPage1"
             android:exported="false" />
         <activity
