@@ -135,4 +135,14 @@ public class ClassPage1 extends AppCompatActivity {
         return isEnabled;
     }
 
+    public void goToCheckIn(View view){
+        Intent intent = new Intent(this, CheckIn.class);
+        startActivity(intent);
+    }
+
+    public void goToAbsent(View view){
+        Intent intent = new Intent(this, Absent.class);
+        startActivity(intent);
+    }
+
 }
