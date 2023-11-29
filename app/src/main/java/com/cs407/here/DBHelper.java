@@ -2,6 +2,7 @@ package com.cs407.here;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -35,21 +36,17 @@ public class DBHelper {
                 new String[]{points, status, name, class1, class2, class3});
     }
 
-    public ArrayList<String> readStudents(String name) {
+    public ArrayList<String> readStudents(String status) {
         createTable();
-        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM users WHERE name LIKE ?", new String[]{"%" + name + "%"});
+        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM users WHERE status LIKE ?", new String[]{"%" + status + "%"});
         int nameIndex = c.getColumnIndex("name");
-        int statusIndex = c.getColumnIndex("status");
         c.moveToFirst();
         ArrayList<String> userList = new ArrayList<>();
         while(!c.isAfterLast()) {
-            if(c.getString(statusIndex).equals("student")) {
-                userList.add(c.getString(nameIndex));
-            }
+            userList.add(c.getString(nameIndex));
             c.moveToNext();
         }
         c.close();
-        //sqLiteDatabase.close();
         return userList;
     }
 
