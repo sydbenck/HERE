@@ -1,5 +1,6 @@
 package com.cs407.here;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,6 +13,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 public class ClassList extends AppCompatActivity {
 
@@ -40,6 +43,16 @@ public class ClassList extends AppCompatActivity {
 
     public void goToClassPage(View view){
         Intent intent = new Intent(this, ClassPage1.class);
+        startActivity(intent);
+    }
+
+    public void logout(View view){
+        gsc.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+            }
+        });
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }
