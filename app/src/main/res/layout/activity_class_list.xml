@@ -9,16 +9,16 @@
     <Button
         android:id="@+id/classButton"
         android:layout_width="306dp"
-        android:layout_height="159dp"
-        android:layout_marginBottom="36dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="343dp"
+        android:onClick="goToClassPage"
         android:text="CS 407: TThF 1-2:15pm"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/classButton2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yourClassesText"
-        android:onClick="goToClassPage"/>
+        app:layout_constraintTop_toBottomOf="@+id/logout_btn" />
 
     <TextView
         android:id="@+id/welcomeText"
@@ -57,13 +57,27 @@
         android:layout_height="164dp"
         android:layout_marginBottom="152dp"
         android:backgroundTint="#3794D3"
+        android:onClick="goToClassPage"
         android:text="ART 100: MWF 8-8:50am"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classButton"
-        android:onClick="goToClassList"/>
+        app:layout_constraintTop_toBottomOf="@+id/classButton" />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="168dp"
+        android:text="Logout"
+        android:onClick="logout"
+        app:layout_constraintBottom_toTopOf="@+id/classButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
