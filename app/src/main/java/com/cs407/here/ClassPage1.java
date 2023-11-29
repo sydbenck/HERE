@@ -38,6 +38,8 @@ public class ClassPage1 extends AppCompatActivity {
 
     private LocationRequest locationRequest;
     private Button hereButton;
+    double longitude;
+    double latitude;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,11 +67,12 @@ public class ClassPage1 extends AppCompatActivity {
                                                     .removeLocationUpdates(this);
                                             if(locationResult != null && locationResult.getLocations().size() > 0){
                                                 int index = locationResult.getLocations().size() - 1;
-                                                double latitude = locationResult.getLocations().get(index).getLatitude();
-                                                double longitude = locationResult.getLocations().get(index).getLongitude();
+                                                latitude = locationResult.getLocations().get(index).getLatitude();
+                                                longitude = locationResult.getLocations().get(index).getLongitude();
 
                                                 Log.d("TAG", "Latitude: " + latitude);
                                                 Log.d("TAG", "Longitude: " + longitude);
+                                                goToCheckin();
 
                                             }
                                         }
@@ -84,6 +87,10 @@ public class ClassPage1 extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 
     private void turnOnGPS() {
         LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
@@ -121,6 +128,11 @@ public class ClassPage1 extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void goToCheckin(){
+        Intent intent = new Intent(this, CheckIn.class);
+        startActivity(intent);
     }
 
     private boolean isGPSEnabled(){
