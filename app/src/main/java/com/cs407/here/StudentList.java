@@ -31,11 +31,11 @@ public class StudentList extends AppCompatActivity {
 
 
         displayNames = new ArrayList<>();
-        ArrayList<String> userList = dbHelper.readStudents("student");
+        ArrayList<StudentInfo> userList = dbHelper.readStudents("student");
 
         displayNames = new ArrayList<>();
-        for(String name: userList) {
-            displayNames.add(String.format("%s\n", name));
+        for(StudentInfo studentInfo: userList) {
+            displayNames.add(String.format("Name: %s\t Points: %s\n", studentInfo.getName(), studentInfo.getPoints()));
         }
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, displayNames);

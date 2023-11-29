@@ -36,14 +36,21 @@ public class DBHelper {
                 new String[]{points, status, name, class1, class2, class3});
     }
 
-    public ArrayList<String> readStudents(String status) {
+    public ArrayList<StudentInfo> readStudents(String status) {
         createTable();
         Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM users WHERE status LIKE ?", new String[]{"%" + status + "%"});
         int nameIndex = c.getColumnIndex("name");
+        int statusIndex = c.getColumnIndex("status");
+        int pointsIndex = c.getColumnIndex("points");
+        int class1Index = c.getColumnIndex("class1");
+        int class2Index = c.getColumnIndex("class2");
+        int class3Index = c.getColumnIndex("class3");
         c.moveToFirst();
-        ArrayList<String> userList = new ArrayList<>();
+        ArrayList<StudentInfo> userList = new ArrayList<>();
         while(!c.isAfterLast()) {
-            userList.add(c.getString(nameIndex));
+            StudentInfo studentInfo = new StudentInfo(c.getString(nameIndex), c.getString(statusIndex), c.getString(pointsIndex),
+                                                        c.getString(class1Index), c.getString(class2Index), c.getString(class3Index));
+            userList.add(studentInfo);
             c.moveToNext();
         }
         c.close();
