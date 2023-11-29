@@ -41,6 +41,20 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/InstructorLoginButton"
+        android:text="Instructor Login"
+        android:textSize="36dp"
+        android:gravity="center"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="goToStudentList"
+        />
+
 </RelativeLayout>
 
 
