@@ -46,7 +46,8 @@
         app:layout_constraintBottom_toTopOf="@+id/absentButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classInfoText" />
+        app:layout_constraintTop_toBottomOf="@+id/classInfoText"
+        android:onClick="goToCheckIn"/>
 
     <Button
         android:id="@+id/absentButton"
@@ -59,7 +60,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hereButton" />
+        app:layout_constraintTop_toBottomOf="@+id/hereButton"
+        android:onClick="goToAbsent"/>
 
     <TextView
         android:id="@+id/coordinateText"
