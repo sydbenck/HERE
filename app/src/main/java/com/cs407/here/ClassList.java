@@ -21,6 +21,7 @@ public class ClassList extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     TextView name;
+    TextView className;
     Button signOutBtn;
 
     @Override
@@ -41,8 +42,15 @@ public class ClassList extends AppCompatActivity {
         }
     }
 
-    public void goToClassPage(View view){
+    public void goToClassPageForArt(View view){
         Intent intent = new Intent(this, ClassPage1.class);
+        intent.putExtra("message", "ART 100: MWF 8-8:50am");
+        startActivity(intent);
+    }
+
+    public void goToClassPageForCS(View view){
+        Intent intent = new Intent(this, ClassPage1.class);
+        intent.putExtra("message", "CS 407: TThF 1-2:15pm");
         startActivity(intent);
     }
 

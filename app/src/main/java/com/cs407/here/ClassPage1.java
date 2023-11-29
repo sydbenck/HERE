@@ -40,10 +40,15 @@ public class ClassPage1 extends AppCompatActivity {
     private Button hereButton;
     double longitude;
     double latitude;
+    TextView classText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_class_page1);
+        classText=(TextView) findViewById(R.id.classInfoText);
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("message");
+        classText.setText(str);
 
         hereButton = findViewById(R.id.hereButton);
         locationRequest = LocationRequest.create();
@@ -51,9 +56,11 @@ public class ClassPage1 extends AppCompatActivity {
         locationRequest.setInterval(5000);
         locationRequest.setFastestInterval(2000);
 
+
         hereButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                     if(ActivityCompat.checkSelfPermission(ClassPage1.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
                         if(isGPSEnabled()) {
