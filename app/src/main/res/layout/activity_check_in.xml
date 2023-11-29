@@ -43,5 +43,6 @@
         android:text="Back to Your Classes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/points"
-        app:layout_constraintTop_toBottomOf="@+id/points" />
+        app:layout_constraintTop_toBottomOf="@+id/points"
+        android:onClick="goToClassList"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
