@@ -20,14 +20,16 @@ public class StudentList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_list);
         Context context = getApplicationContext();
-        context.deleteDatabase("new users");
-        SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("new users", Context.MODE_PRIVATE, null);
+        //context.deleteDatabase("users");
+        SQLiteDatabase sqLiteDatabase = context.openOrCreateDatabase("users", Context.MODE_PRIVATE, null);
         DBHelper dbHelper = new DBHelper(sqLiteDatabase);
 
-        dbHelper.createAccount("master", "instructor", "0", "", "", "");
+        /*dbHelper.createAccount("master", "instructor", "0", "", "", "");
         dbHelper.createAccount("Jane Doe", "student", "0", "CS407", "", "");
         dbHelper.createAccount("Varun", "student", "0", "CS407", "", "");
         dbHelper.createAccount("John Doe", "student", "0", "CS407", "", "");
+        dbHelper.createAccount("SYDNEY BENCK", "student", "0", "CS407", "", "");
+         */
 
 
         displayNames = new ArrayList<>();

@@ -41,4 +41,8 @@ public class StudentInfo {
     public String getClass3() {
         return class3;
     }
+
+    public void setPoints(String points) {
+        this.points = points;
+    }
 }
