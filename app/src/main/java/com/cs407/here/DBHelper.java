@@ -57,4 +57,17 @@ public class DBHelper {
         return userList;
     }
 
+    public StudentInfo getStudentInfo(String name) {
+        createTable();
+        Cursor c = sqLiteDatabase.rawQuery("SELECT * FROM users WHERE name LIKE ?", new String[]{"%" + name + "%"});
+        int statusIndex = c.getColumnIndex("status");
+        int pointsIndex = c.getColumnIndex("points");
+        int class1Index = c.getColumnIndex("class1");
+        int class2Index = c.getColumnIndex("class2");
+        int class3Index = c.getColumnIndex("class3");
+        c.moveToFirst();
+        return new StudentInfo(name, c.getString(statusIndex), c.getString(pointsIndex),
+                c.getString(class1Index), c.getString(class2Index), c.getString(class3Index));
+    }
+
 }
