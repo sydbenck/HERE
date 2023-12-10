@@ -13,13 +13,13 @@ public class InstructorCreateLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructor_create_login);
     }
-    public void goToStudentList(View view) {
-        Intent intent = new Intent(this, StudentList.class);
-        startActivity(intent);
-    }
 
     public void goToInstructorCreate(View view) {
         Intent intent = new Intent(this, InstructorCreatePage.class);
+        startActivity(intent);
+    }
+    public void goToInstructorPage(View view) {
+        Intent intent = new Intent(this, StudentList.class);
         startActivity(intent);
     }
 }
