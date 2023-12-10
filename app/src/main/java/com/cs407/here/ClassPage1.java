@@ -41,6 +41,8 @@ public class ClassPage1 extends AppCompatActivity {
     double longitude;
     double latitude;
     TextView classText;
+    ClassList classList = new ClassList();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +81,25 @@ public class ClassPage1 extends AppCompatActivity {
 
                                                 Log.d("TAG", "Latitude: " + latitude);
                                                 Log.d("TAG", "Longitude: " + longitude);
-                                                goToCheckin();
+                                                Log.d("TAG",  "" + classList.cs);
+                                                Log.d("TAG",  "" + classList.art);
+                                                if(classList.art == true){
+                                                    if(latitude <= 43.073392 && latitude >= 43.073374 && longitude <= -89.406075 && longitude >= -89.399023){
+                                                        goToCheckin();
+                                                    } else {
+                                                        Toast.makeText(ClassPage1.this, "Sorry not in range!", Toast.LENGTH_SHORT).show();
+                                                        Log.d("TAG", "Not here ");
+                                                    }
+                                                }else if(classList.cs == true){
+                                                    Log.d("TAG", " " + (latitude <= 43.071922) + (latitude >= 43.071146) + (longitude <= -89.407246) + (longitude >= -89.406075));
+                                                    if(latitude <= 43.071922 && latitude >= 43.071146 && longitude >= -89.407246 && longitude <= -89.406075){
 
+                                                        goToCheckin();
+                                                    } else {
+                                                        Toast.makeText(ClassPage1.this, "Sorry not in range!", Toast.LENGTH_SHORT).show();
+                                                        Log.d("TAG", "Not here ");
+                                                    }
+                                                }
                                             }
                                         }
                                     }, Looper.getMainLooper());

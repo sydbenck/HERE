@@ -26,6 +26,9 @@ public class ClassList extends AppCompatActivity {
     TextView className;
     Button signOutBtn;
 
+    public static boolean cs = false;
+    public static boolean art = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +50,14 @@ public class ClassList extends AppCompatActivity {
     }
 
     public void goToClassPageForArt(View view){
+        art = true;
         Intent intent = new Intent(this, ClassPage1.class);
         intent.putExtra("message", "ART 100: MWF 8-8:50am");
         startActivity(intent);
     }
 
     public void goToClassPageForCS(View view){
+        cs = true;
         Intent intent = new Intent(this, ClassPage1.class);
         intent.putExtra("message", "CS 407: TThF 1-2:15pm");
         startActivity(intent);
