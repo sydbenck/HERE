@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToStudentList(View view) {
-        Intent intent = new Intent(this, StudentList.class);
+    public void goToInstructorLogin(View view) {
+        Intent intent = new Intent(this, InstructorCreateLogin.class);
         startActivity(intent);
     }
 
