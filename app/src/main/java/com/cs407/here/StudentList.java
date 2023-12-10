@@ -28,8 +28,8 @@ public class StudentList extends AppCompatActivity {
         dbHelper.createAccount("Jane Doe", "student", "0", "CS407", "", "");
         dbHelper.createAccount("Varun", "student", "0", "CS407", "", "");
         dbHelper.createAccount("John Doe", "student", "0", "CS407", "", "");
-        dbHelper.createAccount("SYDNEY BENCK", "student", "0", "CS407", "", "");
-         */
+        dbHelper.createAccount("SYDNEY BENCK", "student", "0", "CS407", "", "");*/
+
 
 
         displayNames = new ArrayList<>();
