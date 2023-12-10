@@ -18,10 +18,47 @@
 
     <ListView
         android:id="@+id/studentList"
-        android:layout_width="409dp"
-        android:layout_height="636dp"
+        android:layout_width="407dp"
+        android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="94dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/create_student"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/create_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:text="Create Student"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_points"
+        app:layout_constraintTop_toBottomOf="@+id/studentList" />
+
+    <Button
+        android:id="@+id/update_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="17dp"
+        android:text="Update Points"
+        app:layout_constraintBaseline_toBaselineOf="@+id/create_student"
+        app:layout_constraintEnd_toStartOf="@+id/create_student"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:text="Log Out"
+        android:onClick="logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_student" />
 </androidx.constraintlayout.widget.ConstraintLayout>
