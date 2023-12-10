@@ -28,4 +28,9 @@ public class InstructorCreatePage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToLogin(){
+        Intent intent = new Intent(this, InstructorCreateLogin.class);
+        startActivity(intent);
+    }
+
 }
