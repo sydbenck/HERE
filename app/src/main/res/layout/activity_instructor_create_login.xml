@@ -9,12 +9,14 @@
     <EditText
         android:id="@+id/instructorLoginName"
         android:layout_width="269dp"
-        android:layout_height="58dp"
+        android:layout_height="0dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="132dp"
+        android:layout_marginBottom="442dp"
         android:ems="10"
         android:hint="Name (ALL CAPS)"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/backtosignin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,5 +53,17 @@
         android:text="Create Account"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backtosignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:text="Back to SignIn"
+        android:onClick="logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructorLoginName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
