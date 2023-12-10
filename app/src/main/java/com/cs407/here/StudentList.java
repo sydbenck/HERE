@@ -3,8 +3,10 @@ package com.cs407.here;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -35,10 +37,17 @@ public class StudentList extends AppCompatActivity {
         displayNames = new ArrayList<>();
         ArrayList<StudentInfo> userList = dbHelper.readStudents("student");
 
+        Intent intent = getIntent();
+        String instructor_name = intent.getStringExtra("instructor name");
+
+        StudentInfo instructor = dbHelper.getStudentInfo(instructor_name);
         displayNames = new ArrayList<>();
         for(StudentInfo studentInfo: userList) {
-            displayNames.add(String.format("Name: %s\t Points: %s\n", studentInfo.getName(), studentInfo.getPoints()));
+            if(studentInfo.class1.equals(instructor.class1)) {
+                displayNames.add(String.format("Name: %s\t Points: %s\n", studentInfo.getName(), studentInfo.getPoints()));
+            }
         }
+
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, displayNames);
         ListView studentListView = (ListView) findViewById(R.id.studentList);
