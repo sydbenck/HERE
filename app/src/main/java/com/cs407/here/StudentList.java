@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -52,6 +53,16 @@ public class StudentList extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, displayNames);
         ListView studentListView = (ListView) findViewById(R.id.studentList);
         studentListView.setAdapter(adapter);
+    }
+
+    public void goToStudentUpdatePoints(View view) {
+        Intent intent = new Intent(this, StudentUpdatePoints.class);
+        startActivity(intent);
+    }
+
+    public void goToCreateStudent(View view) {
+        Intent intent = new Intent(this, CreateStudent.class);
+        startActivity(intent);
     }
 
 }

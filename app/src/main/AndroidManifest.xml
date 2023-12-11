@@ -20,6 +20,9 @@
             android:name=".CreateStudent"
             android:exported="false" />
         <activity
+            android:name=".StudentUpdatePoints"
+            android:exported="false" />
+        <activity
             android:name=".InstructorLoginPage"
             android:exported="false" />
         <activity

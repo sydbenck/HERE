@@ -31,34 +31,32 @@
         android:id="@+id/create_student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="575dp"
         android:text="Create Student"
-        app:layout_constraintBottom_toTopOf="@+id/back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/update_points"
-        app:layout_constraintTop_toBottomOf="@+id/studentList" />
+        android:onClick="goToCreateStudent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/update_points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="575dp"
+        android:onClick="goToStudentUpdatePoints"
         android:text="Update Points"
-        app:layout_constraintBaseline_toBaselineOf="@+id/create_student"
-        app:layout_constraintEnd_toStartOf="@+id/create_student"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="27dp"
-        android:text="Log Out"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="640dp"
         android:onClick="logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Log Out"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/create_student" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
