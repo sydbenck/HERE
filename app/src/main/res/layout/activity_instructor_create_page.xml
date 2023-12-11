@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginBottom="232dp"
+        android:layout_marginBottom="84dp"
         android:onClick="goToInstructorLoginPage"
         android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,14 +44,12 @@
     <EditText
         android:id="@+id/instructor_password"
         android:layout_width="291dp"
-        android:layout_height="0dp"
+        android:layout_height="54dp"
         android:layout_marginStart="63dp"
         android:layout_marginTop="172dp"
-        android:layout_marginBottom="413dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/backToClasses"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,11 +57,10 @@
         android:id="@+id/backToClasses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        android:text="Back to Login"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="433dp"
         android:onClick="goToLogin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Back to Login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructor_password" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
