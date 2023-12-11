@@ -72,7 +72,7 @@
         android:backgroundTint="#DBC5FF"
         android:onClick="logout"
         android:text="Log Out"
-        android:textColor="#310775"
+        android:textColor="#FFCD1E1E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
