@@ -4,45 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#97B372"
     tools:context=".CheckIn">
 
     <TextView
         android:id="@+id/checkIn"
-        android:layout_width="327dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="161dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="82dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="42dp"
+        android:backgroundTint="#878787"
         android:fontFamily="sans-serif-condensed"
         android:text="You've Checked in!"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/toClasses"
+        app:layout_constraintBottom_toTopOf="@+id/points"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/points"
         android:layout_width="174dp"
         android:layout_height="0dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="60dp"
         android:fontFamily="sans-serif-medium"
         android:text="2 points added "
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/toClasses"
-        app:layout_constraintStart_toStartOf="@+id/checkIn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkIn" />
 
     <Button
         android:id="@+id/toClasses"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="319dp"
+        android:layout_width="185dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="268dp"
+        android:backgroundTint="#686565"
+        android:onClick="goToClassList"
         android:text="Back to Your Classes"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/points"
-        app:layout_constraintTop_toBottomOf="@+id/points"
-        android:onClick="goToClassList"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points" />
 </androidx.constraintlayout.widget.ConstraintLayout>

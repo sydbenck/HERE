@@ -12,13 +12,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
-        android:layout_marginBottom="310dp"
         android:gravity="center"
         android:text="HERE!"
         android:textColor="#ffff"
         android:textSize="45dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/myImageView"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -111,13 +110,14 @@
         android:id="@+id/myImageView"
         android:layout_width="78dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="167dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="39dp"
         android:contentDescription="Image description"
         android:src="@drawable/pencil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/InstructorCreate"
-        app:layout_constraintStart_toStartOf="@+id/InstructorCreate"
-        app:layout_constraintTop_toBottomOf="@+id/here2" />
+        app:layout_constraintBottom_toBottomOf="@+id/InstructorCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/InstructorLogin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
