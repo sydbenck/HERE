@@ -4,63 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7A88AF"
     tools:context=".InstructorCreatePage">
+
+    <ImageView
+        android:id="@+id/myImageView2"
+        android:layout_width="115dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:contentDescription="Image description"
+        android:src="@drawable/pencil"
+        app:layout_constraintBottom_toTopOf="@+id/instructorCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backToClasses" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="41dp"
+        android:text="Instuctor Create Account"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/instructorName"
+        app:layout_constraintStart_toStartOf="@+id/instructorName"
+        app:layout_constraintTop_toBottomOf="@+id/here" />
+
+    <TextView
+        android:id="@+id/here"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:text="HERE!"
+        android:textColor="#ffff"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/instructorName"
-        android:layout_width="289dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="75dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="19dp"
         android:ems="10"
         android:hint="Name (ALL CAPS)"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/instructor_password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/instructorClass"
-        android:layout_width="289dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="Class"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/backToClasses"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/instructor_password" />
 
     <Button
         android:id="@+id/instructorCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="7dp"
         android:layout_marginBottom="84dp"
+        android:backgroundTint="#DBC5FF"
         android:onClick="goToInstructorLoginPage"
         android:text="Create"
+        android:textColor="#310775"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/myImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/myImageView2" />
 
     <EditText
         android:id="@+id/instructor_password"
-        android:layout_width="291dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="172dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="25dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/instructorClass"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/instructorName" />
 
     <Button
         android:id="@+id/backToClasses"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="433dp"
+        android:layout_marginBottom="34dp"
+        android:backgroundTint="#DBC5FF"
         android:onClick="goToLogin"
         android:text="Back to Login"
+        android:textColor="#310775"
+        app:layout_constraintBottom_toTopOf="@+id/myImageView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/instructorClass" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

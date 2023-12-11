@@ -4,59 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7A88AF"
     tools:context=".StudentList">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/here4"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:gravity="center"
         android:text="Names"
+        android:textColor="#000000"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/studentList"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/studentList"
-        android:layout_width="407dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toTopOf="@+id/create_student"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/here4" />
 
     <Button
         android:id="@+id/create_student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="234dp"
-        android:layout_marginTop="575dp"
-        android:text="Create Student"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="#DBC5FF"
         android:onClick="goToCreateStudent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Create Student"
+        android:textColor="#310775"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/update_points"
+        app:layout_constraintTop_toBottomOf="@+id/studentList" />
 
     <Button
         android:id="@+id/update_points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="575dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="#DBC5FF"
         android:onClick="goToStudentUpdatePoints"
         android:text="Update Points"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="#310775"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toStartOf="@+id/create_student"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="640dp"
+        android:layout_marginBottom="43dp"
+        android:backgroundTint="#DBC5FF"
         android:onClick="logout"
         android:text="Log Out"
+        android:textColor="#310775"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/create_student" />
 </androidx.constraintlayout.widget.ConstraintLayout>
